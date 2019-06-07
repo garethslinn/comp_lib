@@ -1,0 +1,117 @@
+// AIG ui-toolkit specfic style rules - _uitspecific.scss
+
+@mixin grid($grid-columns) {
+	display: grid;
+	grid-template-columns: $grid-columns;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	justify-items: stretch;
+	align-items: stretch;
+}
+.uit-container {
+	font-family: Source Sans Pro, sans-serif;
+}
+
+.uit-example-container {
+	border: #69707f 1px solid;
+	background-color: #bfbfbf;
+	padding: 11px;
+}
+
+.demo {
+	width: 100%;
+	background: $steel-xlight;
+	text-align: center;
+	border: 1px solid $steel-light;
+}
+
+.uit-menu {
+	margin-left: 30px;
+	text-transform: capitalize;
+
+	a {
+		display: block;
+		padding-right: 10px;
+		float: left;
+		font-size: 20px;
+		text-decoration: none;
+	}
+}
+
+.backToTop {
+	clear: both;
+	display: block;
+	float: right;
+	color: red;
+	position: absolute;
+	right: 30px;
+}
+
+.uit-main-title,
+.uit-footer {
+	background-color: $primary-dark-blue;
+	color: $white;
+	text-align: center;
+	border-top: 1px solid red;
+}
+
+.uit-title {
+	margin-top: 20px;
+	border-top: 2px solid #00a4e4;
+	color: #00a4e4;
+	span {
+		background: $error;
+		color: $white;
+		padding: 2px 10px;
+		margin-top: 1px;
+		display: inline-block;
+		font-size: $txt-large;
+	}
+}
+
+.uit-list,
+.uit-list ul {
+	list-style-type: none;
+}
+
+.uit-scrollbox {
+	height: 200px;
+	width: auto;
+	overflow-y: scroll;
+}
+
+/* 2 column grid */
+.grid-2-columns {
+	@include grid(48% 48%);
+}
+
+/* 2 column grid variant */
+.grid-2-columns-a {
+	@include grid(28% 68%);
+}
+
+/* 3 column grid */
+.grid-3-columns {
+	@include grid(20% 30% 30%);
+	grid-template-rows: auto auto auto auto auto auto;
+}
+
+/* 4 column grid */
+.grid-4-columns {
+	@include grid(20% 20% 20% 20%);
+}
+
+/* colour blocks */
+.uit-colour-block {
+	padding: 20px 0;
+	min-height: 20px;
+	text-align: center;
+}
+
+/* examples */
+.uit-ex {
+	background: $yellow-light;
+	color: $orange-darkest;
+	padding: 10px;
+	overflow: hidden;
+}

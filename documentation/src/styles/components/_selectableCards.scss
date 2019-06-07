@@ -1,0 +1,75 @@
+// AIG ui-toolkit - _selectableCards.scss
+
+@mixin card-focus($padding) {
+  box-shadow: 0 0 0.8rem 0.2rem $selectable-card-shadow;
+  border: solid 0.2rem $primary-medium-blue;
+  background-color: $button-focus;
+  color: $primary-medium-blue;
+  padding: $padding;
+}
+
+@mixin card-config($bg-color, $color, $font-weight, $font-size, $padding) {
+  box-shadow: 0 0.4rem 0.8rem 0 $selectable-card-shadow;
+  border: solid 0.1rem $selectable-card-border;
+  background-color: $bg-color;
+  color: $color;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  padding: $padding;
+}
+
+.selectable-card {
+  @include card-config($white, $primary-medium-blue, 100, 2rem, 2rem 3rem 0 3rem);
+  box-sizing: border-box;
+  min-width: 24rem;
+  max-width: 24rem;
+  max-height: 17rem;
+  height: 17rem;
+  border-radius: 0.6rem;
+  overflow-y: auto;
+
+  text-transform: none;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  outline: none;
+  display: inline-block;
+
+  margin: 0;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  .title {
+    font-family: FuturaPT, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.2;
+  }
+  .description {
+    font-size: 1.7rem;
+    line-height: 1.41;
+  }
+
+  &:disabled {
+    background-color: $steel-xlight;
+    color: $primary-dark-blue;
+
+    &:hover {
+      background-color: $steel-xlight;
+      box-shadow: 0 0.4rem 0.8rem 0 $selectable-card-shadow;
+      border: solid 0.1rem $selectable-card-border;
+      color: $primary-dark-blue;
+    }
+  }
+
+  &:hover {
+    border: solid 0.2rem $primary-dark-blue;
+    color: $primary-dark-blue;
+  }
+
+  &:focus{
+    @include card-config($primary-medium-blue, $white, 100, 2rem, 2rem 3rem 0 3rem);
+  }
+
+}

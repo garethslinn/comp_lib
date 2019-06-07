@@ -1,0 +1,229 @@
+// AIG ui-toolkit - _buttons.scss
+
+@mixin button-focus($padding) {
+  box-shadow: 0 0 0.8rem 0.2rem $button-shadow;
+  border: solid 0.2rem $primary-medium-blue;
+  background-color: $button-focus;
+  color: $primary-medium-blue;
+  padding: $padding;
+}
+
+@mixin button-config($bg-color, $color, $font-weight, $font-size, $padding) {
+  background-color: $bg-color;
+  color: $color;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  padding: $padding;
+}
+
+@mixin button-disabled() {
+  background-color: $button-disabled-bg;
+  color: $button-disabled-fg;
+  border: none;
+
+  &:hover {
+    background-color: $button-disabled-bg;
+  }
+}
+
+@mixin button-icon($font-color) {
+  color: $font-color;
+  font-size: 2rem;
+  margin: 0 3rem 0 1rem;
+}
+
+.button {
+  @include button-config(
+    $primary-medium-blue,
+    $white,
+    900,
+    1.6rem,
+    1.7rem 2.8rem 1.7rem 2.8rem
+  );
+  text-transform: uppercase;
+  font-family: "futura-pt-bold",sans-serif; font-style:normal; font-weight:700;
+  line-height: 1.85rem;
+  outline: none;
+  display: inline-block;
+  border: none;
+  margin: 0 1rem 0 0;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  .icon {
+    position: absolute;
+    right: -1.5rem;
+    bottom: 0.9rem;
+    @include button-icon($white);
+  }
+
+
+  &:disabled {
+    @include button-disabled;
+
+    .icon {
+      @include button-icon($primary-medium-blue);
+    }
+  }
+
+  &:hover {
+    background-color: $primary-dark-blue;
+  }
+
+  &:focus {
+    @include button-focus(1.5rem 2.6rem);
+  }
+
+  &.button-secondary {
+    @include button-config($white, $primary-medium-blue, 900, 1.6rem, 1.5rem 2.5rem);
+    border: 0.2rem solid $primary-medium-blue;
+
+    .icon {
+      bottom: 1.3rem;
+      @include button-icon($primary-medium-blue);
+    }
+
+    &:hover {
+      border: 0.2rem solid $primary-dark-blue;
+      color: $primary-dark-blue;
+    }
+
+    &:focus {
+      @include button-focus(1.5rem 2.6rem);
+    }
+
+    &:disabled {
+      @include button-disabled;
+    }
+  }
+
+  &.button-primary-sm {
+    @include button-config($primary-medium-blue, $white, 900, 1.4rem, 1.2rem 2.2rem);
+
+    &:disabled {
+      @include button-disabled;
+
+      .icon {
+        @include button-icon($primary-medium-blue);
+      }
+    }
+  }
+
+  &.button-secondary-sm {
+    @include button-config($white, $primary-medium-blue, 900, 1.4rem, 1rem 2rem);
+    border: 0.2rem solid $primary-medium-blue;
+
+    .icon {
+      bottom: 0.7rem;
+      @include button-icon($primary-medium-blue);
+    }
+
+    &:hover {
+      border: 0.2rem solid $primary-dark-blue;
+      color: $primary-dark-blue;
+    }
+
+    &:focus {
+      @include button-focus(1rem 2rem);
+    }
+  }
+
+  &.button-primary-sm {
+    @include button-config($primary-medium-blue, $white, 900, 1.4rem, 1rem 2rem);
+    .icon {
+      @include button-icon($white);
+    }
+
+    &:hover {
+      background: $primary-dark-blue;
+    }
+
+    &:focus {
+      @include button-focus(1rem 2rem);
+    }
+  }
+
+  &.button-secondary-sm,
+  &.button-primary-sm {
+    &.button-icon {
+      &:focus {
+        @include button-focus(1rem 4.4rem 1rem 2rem);
+      }
+
+      &:disabled {
+        @include button-disabled;
+
+        .icon {
+          @include button-icon($primary-medium-blue);
+        }
+      }
+    }
+    .icon {
+      bottom: 0.3rem;
+    }
+  }
+
+  &.button-tertiary,
+  &.button-tertiary-sm,
+  &.button-quaternary,
+  &.button-quaternary-sm {
+    padding: 1.5rem 0.4rem;
+    color: $primary-medium-blue;
+    background-color: transparent;
+    font-family: 'futura-pt', sans-serif;
+    font-weight: 500;
+
+    span {
+      padding: 0 0 0.4rem 0;
+      border-bottom: 0.2rem solid $primary-medium-blue;
+      display: inline-block;
+      &:hover {
+        border-bottom: 0.2rem solid $primary-dark-blue;
+        color: $primary-dark-blue;
+      }
+    }
+
+    &:hover {
+      border-bottom: 0.2rem solid $primary-dark-blue;
+      color: $primary-dark-blue;
+      padding-bottom: 0.2rem;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      background-color: transparent;
+    }
+    &:hover {
+      border-bottom: 0.2rem solid $white;
+      span {
+        color: $primary-dark-blue;
+        border-bottom: 0.2rem solid $primary-dark-blue;
+        background-color: transparent;
+        &:hover {
+          background-color: transparent;
+          color: $primary-medium-blue;
+          border-bottom: 0.2rem solid $primary-medium-blue;
+        }
+      }
+    }
+
+    &:focus {
+      @include button-focus(1.5rem 0.4rem);
+    }
+  }
+
+  &.button-tertiary-sm,
+  &.button-quaternary-sm,
+  &.button-quaternary {
+    text-transform: none;
+  }
+
+  &.button-icon {
+    padding-right: 5.4rem;
+    &:focus {
+      @include button-focus(1.5rem 5.3rem 1.5rem 2.6rem);
+    }
+  }
+}

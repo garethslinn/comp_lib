@@ -1,0 +1,130 @@
+// AIG ui-toolkit - _icons.scss
+
+$icon-sm: 3rem;
+$icon-md: 3.5rem;
+$icon-lg: 4rem;
+$icon-xl: 4.5rem;
+
+.icon {
+	cursor: pointer;
+	font-size: $icon-sm;
+	border: none;
+	outline: transparent;
+	background-color: transparent;
+	fill: $primary-dark-blue;
+	font-family: 'aig ui toolkit', serif;
+
+	&.icon-md {
+		width: $icon-md;
+		height: $icon-md;
+	}
+
+	&.icon-lg {
+		width: $icon-lg;
+		height: $icon-lg;
+	}
+
+	&.icon-xl {
+		width: $icon-xl;
+		height: $icon-xl;
+	}
+
+	&.icon-primary {
+		fill: $primary-medium-blue;
+	}
+
+	&.icon-primary-stroke {
+		stroke: $primary-medium-blue;
+	}
+
+	&.icon-secondary {
+		fill: $white;
+	}
+
+	&.icon-secondary-stroke {
+		stroke: $white;
+	}
+
+	&.icon-darkgrey {
+		fill: $grey-darkest;
+	}
+}
+
+
+.icon-bullet-diamond:before{content:'\0041';}
+.icon-bullet-dot:before{content:'\0042';}
+.icon-alert:before{content:'\0043';}
+.icon-calendar:before{content:'\0044';}
+.icon-cancel:before{content:'\0045';}
+.icon-close-lg:before{content:'\0046';}
+.icon-close-md:before{content:'\0047';}
+.icon-comment:before{content:'\0048';}
+.icon-contact:before{content:'\0049';}
+.icon-correct:before{content:'\004a';}
+.icon-document:before{content:'\004b';}
+.icon-download_doc:before{content:'\004c';}
+.icon-drag:before{content:'\004d';}
+.icon-edit:before{content:'\004e';}
+.icon-export:before{content:'\004f';}
+.icon-graph:before{content:'\0050';}
+.icon-help:before{content:'\0051';}
+.icon-hide:before{content:'\0052';}
+.icon-home:before{content:'\0053';}
+.icon-image:before{content:'\0054';}
+.icon-infomation:before{content:'\0055';}
+.icon-list:before{content:'\0056';}
+.icon-locate:before{content:'\0057';}
+.icon-mail-closed:before{content:'\0058';}
+.icon-mail-open:before{content:'\0059';}
+.icon-mandatory:before{content:'\005a';}
+.icon-map_pin:before{content:'\0061';}
+.icon-map_pin_solid:before{content:'\0062';}
+.icon-map_v1:before{content:'\0063';}
+.icon-map-v2:before-{content:'\0064';}
+.icon-menu:before{content:'\0065';}
+.icon-menu2:before{content:'\0066';}
+.icon-notcorrect:before{content:'\0067';}
+.icon-reorder-v-1:before{content:'\0068';}
+.icon-reorder_v1:before{content:'\0069';}
+.icon-reorder_v2:before{content:'\006a';}
+.icon-reports:before{content:'\006b';}
+.icon-resize:before{content:'\006c';}
+.icon-lg-down:before{content:'\006d';}
+.icon-lg-left:before{content:'\006e';}
+.icon-lg-right:before{content:'\006f';}
+.icon-lg-up:before{content:'\0070';}
+.icon-sm-down:before{content:'\0071';}
+.icon-sm-left:before{content:'\0072';}
+.icon-sm-right:before{content:'\0073';}
+.icon-sm-up:before{content:'\0074';}
+.icon-md-down:before{content:'\0075';}
+.icon-md-left:before{content:'\0076';}
+.icon-md-right:before{content:'\0077';}
+.icon-md-up:before{content:'\0078';}
+.icon-four:before{content:'\0079';}
+.icon-one:before{content:'\007a';}
+.icon-three:before{content:'\0030';}
+.icon-two:before{content:'\0031';}
+.icon-table:before{content:'\0032';}
+.icon-left:before{content:'\0033';}
+.icon-right:before{content:'\0034';}
+.icon-down:before{content:'\0035';}
+.icon-up:before{content:'\0036';}
+.icon-plus:before{content:'\0037';}
+.icon-map-pin:before{content:'\0038';}
+.icon-secure:before{content:'\0039';}
+.icon-calendar:before{content:'\0021';}
+.icon-trash:before{content:'\0022';}
+.icon-share:before{content:'\0023';}
+.icon-search:before{content:'\0024';}
+.icon-user:before{content:'\0025';}
+.icon-sliders:before{content:'\0026';}
+.icon-star-select:before{content:'\0027';}
+.icon-star:before{content:'\0028';}
+.icon-visible:before{content:'\0029';}
+.icon-warning-a:before{content:'\002a';}
+.icon-warning-b:before{content:'\002b';}
+
+
+
+

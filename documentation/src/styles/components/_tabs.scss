@@ -1,0 +1,93 @@
+@mixin tab-hover() {
+  background-color: $primary-dark-blue;
+  color: $white;
+  border-bottom: none;
+}
+
+@mixin tab-basic-hover($color) {
+  background-color: transparent;
+  color: $color;
+}
+
+.tabs {
+  .tab {
+    color: $steel-dark;
+    display: inline-block;
+    padding: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: $grey-xxlight;
+    border: 1px solid $selectable-card-border;
+    border-radius: 0.5rem 0.5rem 0 0;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    outline: none;
+    width: 100%;
+    text-align: center;
+
+    &:hover {
+      @include tab-hover;
+    }
+
+    &.active {
+      background: none;
+      border-bottom: none;
+      color: $primary-dark-blue;
+
+      &:hover {
+        @include tab-hover;
+      }
+    }
+
+    &:disabled {
+      color: $button-disabled-fg;
+      background-color: $button-disabled-bg;
+    }
+    .content {
+      padding: 0;
+      margin-top: 1rem;
+    }
+  }
+  &.tabs-sm {
+    .tab {
+      font-size: 1.2rem;
+      padding: 0.8rem 1.2rem;
+    }
+  }
+  &.tabs-basic {
+    .tab {
+      padding: 1.5rem 1.5rem 0.3rem 1.5rem;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid $selectable-card-border;
+      &:hover {
+        @include tab-basic-hover($steel-dark);
+      }
+      &.active {
+        border-bottom: 3px solid $primary-medium-blue;
+        &:hover {
+          @include tab-basic-hover($primary-dark-blue);
+        }
+      }
+      &:disabled {
+        @include tab-basic-hover($button-disabled-fg);
+        border-bottom: 2px solid $disabled-underline;
+      }
+    }
+
+  }
+
+  }
+
+
+
+
+@media (min-width: 32rem) {
+  .tabs {
+    .tab {
+      width: auto;
+      border-radius: 0.5rem 0.5rem 0 0;
+      margin-top: 1rem;
+    }
+  }
+}

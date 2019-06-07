@@ -1,0 +1,41 @@
+// AIG ui-toolkit - _alerts.scss
+
+.alert {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	line-height: 1.15;
+
+	box-sizing: border-box;
+
+	width: 100%;
+	color: $white;
+
+	padding: 0.5rem 0;
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
+	position: relative;
+
+	.icon {
+		align-self: flex-end;
+		position: absolute;
+		right: -0.1rem;
+		top: -0.3rem;
+	}
+
+	&.confirmation {
+		background-color: $conformation;
+	}
+
+	&.notification {
+		background-color: $notification;
+		color: $grey-darkest;
+	}
+	&.error {
+		background-color: $error;
+	}
+
+	&.information {
+		background-color: $primary-medium-blue;
+	}
+}

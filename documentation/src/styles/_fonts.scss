@@ -1,0 +1,51 @@
+@import url("https://p.typekit.net/p.css?s=1&k=ltd7hpz&ht=tk&f=10879.10884.32874&a=15727615&app=typekit&e=css");
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+
+@font-face {
+  font-family:"futura-pt";
+  src:url("https://use.typekit.net/af/2cd6bf/00000000000000000001008f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/2cd6bf/00000000000000000001008f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/2cd6bf/00000000000000000001008f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+  font-style:normal;font-weight:500;
+}
+
+@font-face {
+  font-family:"futura-pt";
+  src:url("https://use.typekit.net/af/9b05f3/000000000000000000013365/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/9b05f3/000000000000000000013365/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/9b05f3/000000000000000000013365/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-style:normal;font-weight:400;
+}
+
+@font-face {
+  font-family:"futura-pt-bold";
+  src:url("https://use.typekit.net/af/053fc9/00000000000000003b9af1e4/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/053fc9/00000000000000003b9af1e4/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/053fc9/00000000000000003b9af1e4/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+  font-style:normal;font-weight:700;
+}
+
+.light { font-family: "futura-pt",sans-serif; font-style:normal; font-weight:400; }
+p.light,
+.text-field-label,
+.text-field-label-sm {
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
+.bold { font-family: "futura-pt-bold",sans-serif; font-style:normal; font-weight:700; }
+.heavy { font-family: "futura-pt",sans-serif; font-style:normal; font-weight:500; color:$grey-darkest; }
+.regular { font-family: Arial, Helvetica, sans-serif; }
+
+@font-face {
+  font-family: 'aig ui toolkit';
+  src: url('../assets/fonts/aig-ui-toolkit.eot');
+  src: url('../assets/fonts/aig-ui-toolkit.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/aig-ui-toolkit.woff') format('woff'),
+  url('../assets/fonts/aig-ui-toolkit.ttf') format('truetype'),
+  url('../assets/fonts/aig-ui-toolkit.svg#aig-ui-toolkit') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class*='icon-']:before{
+  display: inline-block;
+  font-family: 'aig ui toolkit', serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}

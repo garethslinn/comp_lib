@@ -1,0 +1,123 @@
+/* headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 400;
+  color: $primary-dark-blue;
+  font-family: 'futura-pt', sans-serif;
+  font-style: normal;
+}
+
+h1.hero {
+  font-size: 4.2rem;
+  line-height: 5rem;
+}
+
+body {
+  h1,
+  .h1 {
+    font-size: 3.5rem; // overwrite normalize
+    line-height: 4.2rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 2.9rem;
+  line-height: 3.5rem;
+}
+
+h3,
+.h3 {
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+
+h4,
+.h4 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.7rem;
+  line-height: 2rem;
+}
+
+h6,
+.h6 {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+.hr {
+  border-bottom: 1rem solid black;
+  padding-bottom: 0.5rem;
+}
+
+hr {
+  margin: 0;
+}
+
+.txt-xlarge {
+  font-size: 2rem;
+  line-height: 2.9rem;
+}
+
+.txt-large {
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+}
+
+.txt-medium,
+p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.txt-small {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+
+.txt-xsmall {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+.label-large,
+.label-medium,
+.label-small {
+  display: block;
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  &.bold {
+    font-weight: 600;
+  }
+}
+
+.label-large {
+  font-size: 1.7rem;
+  line-height: 2rem;
+}
+
+.label-medium {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.label-small {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+

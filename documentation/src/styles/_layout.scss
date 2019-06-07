@@ -1,0 +1,41 @@
+// AIG ui-toolkit - _layout.scss.
+
+body, html {
+	font-family: 'Source Sans Pro', Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 1.4;
+	min-height: 100%;
+	background-color: #fff;
+}
+
+.wrapper {
+	padding: 0 1.25rem;
+}
+
+fieldset {
+	padding: 0;
+	margin: 0;
+	border: none;
+	span {
+		position: relative;
+		display: block;
+	}
+	width: 0
+}
+
+.hide {
+	display: none;
+}
+
+.block {
+	width: 100%;
+}
+
+p,
+label{
+	color: $primary-dark-blue;
+}
+
+label {
+	cursor: pointer;
+}
