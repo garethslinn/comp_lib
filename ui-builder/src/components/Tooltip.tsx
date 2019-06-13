@@ -1,13 +1,18 @@
 import * as React from 'react';
 
-interface Tooltip {
-  position: string;
-  children: any;
-  type: string
+interface State {
+  isVisible: boolean;
 }
 
-export class Tooltip extends React.Component<Tooltip, {}> {
-  constructor(props) {
+interface Props {
+  position: string;
+  children: any;
+  type: string;
+  message: any;
+}
+
+export class Tooltip extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {
@@ -15,7 +20,7 @@ export class Tooltip extends React.Component<Tooltip, {}> {
     };
   }
 
-  show = (activeState) => {
+  show = (activeState: boolean) => {
     this.setState({ isVisible: activeState });
   };
 
@@ -25,7 +30,9 @@ export class Tooltip extends React.Component<Tooltip, {}> {
     return (
       <span className="tooltip" onMouseLeave={() => show(false)}>
         {this.state.isVisible && (
-          <div className={`tooltip-content tooltip-${position} tooltip-${type}`}>
+          <div
+            className={`tooltip-content tooltip-${position} tooltip-${type}`}
+          >
             <div className="tooltip-message">{message}</div>
           </div>
         )}

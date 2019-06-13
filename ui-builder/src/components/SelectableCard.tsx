@@ -8,11 +8,12 @@ interface SelectableCard {
 }
 
 export const SelectableCard : React.FunctionComponent<SelectableCard> = (props) => {
+	const {isDisabled, title, description} = props;
 	return (
 		<React.Fragment>
-			<button disabled={props.isDisabled} onClick={props.action} className="selectable-card">
-				<div className="title">{props.title}</div>
-				<p className="description">{props.description}</p>
+			<button disabled={isDisabled} onClick={props.action} className="selectable-card">
+				<div className="title">{title}</div>
+				<p className="description">{description}</p>
 			</button>
 		</React.Fragment>
 	);

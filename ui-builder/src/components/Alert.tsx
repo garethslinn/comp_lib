@@ -6,10 +6,11 @@ interface Alert {
   iconType: string;
   children: any;
 }
-export const Alert: React.FunctionComponent<Alert> = (props) => {
+export const Alert: React.FunctionComponent<Alert> = (props:any) => {
+    const { action, alertType, children } = props;
     return (
-      <div onClick={props.action} className={'alert ' + props.alertType}>
-        <div>{props.children}</div>
+      <div onClick={action} className={'alert ' + alertType}>
+        <div>{children}</div>
       </div>
     );
-}
+};

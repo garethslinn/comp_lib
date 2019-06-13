@@ -40,7 +40,7 @@ export class Tabs extends React.Component<Props, State> {
         };
 
         return (
-            <button disabled={isDisabled} onClick={this.select(i)} className={`${selected} tab`}>
+            <button role="tab" disabled={isDisabled} onClick={this.select(i)} className={`${selected} tab`}>
               {removeFlag()}
             </button>
         );
@@ -63,7 +63,7 @@ export class Tabs extends React.Component<Props, State> {
     const tabSize = isTabSmall ? '-sm' : '-lg';
     const basic = isBasic ? 'tabs-basic' : '';
     return (
-        <div className={`tabs tabs${tabSize} ${basic}`}>
+        <div role="tabgroup" className={`tabs tabs${tabSize} ${basic}`}>
           {this.tabs()}
           {this.content()}
         </div>

@@ -3,10 +3,12 @@ import * as ReactDOM from 'react-dom';
 import '../styles/app.css';
 
 import { Button } from '../components/Button';
-import {Alert} from "../components/Alert";
-import {Tabs} from "../components/Tabs";
-import {SelectableCard} from "../components/SelectableCard";
-import {Tooltip} from "../components/Tooltip";
+import { Range } from '../components/Range';
+import { Tabs } from '../components/Tabs';
+import { SelectableCard } from '../components/SelectableCard';
+import { Tooltip } from '../components/Tooltip';
+import { RadioButton } from '../components/RadioButton';
+import { Toggle } from '../components/Toggle';
 //import Icons from '../styleGuide/Icons';
 
 class App extends React.Component {
@@ -15,10 +17,10 @@ class App extends React.Component {
       return true;
     };
 
-      return (
+    return (
       <div>
         <header className="header">
-          <h1 className="uit-main-title">Development use only</h1>
+          <h1 className="uit-maititle">Development use only</h1>
         </header>
 
         <div className="wrapper">
@@ -33,52 +35,29 @@ class App extends React.Component {
           <h1>title</h1>
           <p>This is a test</p>
 
-          <Tabs isTabSmall={false}>
-            test1
-            <span>
-              <p>This is content for the first tab</p>
-            </span>
-            test2
-            <span>
-              <p>This is content for the second tab</p>
-            </span>
-            test -disabled-
-            <span>
-              <p>This is content for the third tab</p>
-            </span>
-          </Tabs>
-
-          <Button
-              action={func}
-              buttonType="primary"
-              isButtonSmall
-              isButtonWithIcon
-              isButtonDisabled={false}
-              isBlock={false}
-          >
-            Active
-            <span className="icon icon-close-lg" />
-          </Button>
-
-          <Alert action={func} alertType="notification" iconType="darkgrey">
-            <span>Notification</span>
-          </Alert>
-
-          <SelectableCard
-              action={func}
-              title="Selectable Card State"
-              description="Lorem ipsum dolor sit amet, consectetur"
-              isDisabled={false}
-          >
-            <span>Active</span>
-          </SelectableCard>
-
-
-
-
-
-
-
+          <div className="grid">
+            <div className="col-12">
+              <div className="toggle-group">
+                <input
+                  type="checkbox"
+                  name="on-off-switch"
+                  id="on-off-switch"
+                  defaultChecked=""
+                  tabIndex="1"
+                />
+                <label htmlFor="on-off-switch">
+                  <span className="aural">Show:</span> Show Accessible Toggle
+                  Switch
+                </label>
+                <div className="onoffswitch pull-right" aria-hidden="true">
+                  <div className="onoffswitch-label">
+                    <div className="onoffswitch-inner"> </div>
+                    <div className="onoffswitch-switch"> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <footer className="uit-footer">footer</footer>
       </div>
