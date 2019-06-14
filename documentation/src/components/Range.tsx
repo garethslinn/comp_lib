@@ -2,6 +2,7 @@ import * as React from 'react';
 // @ts-ignore
 import Slider from 'react-rangeslider';
 import 'react-rangeslider/lib/index.css';
+import {UISize} from "./types/types";
 
 interface State {
   value: number;
@@ -13,7 +14,7 @@ interface Props {
   step: number;
   hasTooltip: boolean;
   showValue: boolean;
-  size: string;
+  size: UISize;
   forceWidth: number;
 }
 

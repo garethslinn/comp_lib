@@ -35,29 +35,49 @@ class App extends React.Component {
           <h1>title</h1>
           <p>This is a test</p>
 
+          <Toggle id="1" size="sm" label="Label" isDisabled={false} />
+          <Toggle id="2" size="sm" label="Label" isDisabled={false} />
+
+
           <div className="grid">
             <div className="col-12">
-              <div className="toggle-group">
-                <input
-                  type="checkbox"
-                  name="on-off-switch"
-                  id="on-off-switch"
-                  defaultChecked=""
-                  tabIndex="1"
-                />
-                <label htmlFor="on-off-switch">
-                  <span className="aural">Show:</span> Show Accessible Toggle
-                  Switch
-                </label>
-                <div className="onoffswitch pull-right" aria-hidden="true">
-                  <div className="onoffswitch-label">
-                    <div className="onoffswitch-inner"> </div>
-                    <div className="onoffswitch-switch"> </div>
-                  </div>
-                </div>
-              </div>
+              <Range
+                min={10}
+                max={50}
+                hasTooltip={true}
+                step={0.1}
+                size="sm"
+                showValue={false}
+                forceWidth={0}
+              />
+            </div>
+
+            <div className="col-12">
+              <Range
+                  min={10}
+                  max={50}
+                  hasTooltip={false}
+                  step={0.1}
+                  size="md"
+                  showValue={false}
+                  forceWidth={50}
+              />
+            </div>
+
+            <div className="col-12">
+              <Range
+                  min={10}
+                  max={50}
+                  hasTooltip={false}
+                  step={0.1}
+                  size="lg"
+                  showValue={true}
+                  forceWidth={30}
+              />
             </div>
           </div>
+
+
         </div>
         <footer className="uit-footer">footer</footer>
       </div>

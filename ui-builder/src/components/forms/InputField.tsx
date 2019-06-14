@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as utils from '../utils/utils';
 
 interface InputField {
   type: string;
@@ -7,6 +6,7 @@ interface InputField {
   isDisabled: boolean;
   isError: boolean;
   placeHolder: string;
+  elementFormId: string;
   label: string;
   children: any
 }
@@ -15,7 +15,6 @@ export const InputField: React.FunctionComponent<InputField> = props => {
   const fieldSize = props.isLarge ? '' : '-sm';
   const error = props.isError ? 'error' : '';
   const disabled = props.isDisabled ? 'disabled' : '';
-  const elementFormId = utils.keygen();
 
   return (
     <fieldset>
@@ -25,13 +24,13 @@ export const InputField: React.FunctionComponent<InputField> = props => {
             className={
               'text-field-label' + fieldSize + ' ' + error + ' ' + disabled
             }
-            htmlFor={elementFormId}
+            htmlFor={props.elementFormId}
           >
             {props.label}
           </label>
           <span>
             <input
-              id={elementFormId}
+              id={props.elementFormId}
               disabled={props.isDisabled}
               placeholder={props.placeHolder}
               type="text"

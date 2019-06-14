@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "outDir": "./build",
+    "outFile": "./build/index.js",
     "target": "es5",
-    "module": "commonjs",
+    "module": "amd",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "removeComments": true,

@@ -35,8 +35,8 @@ export class Range extends React.Component<Props, State> {
 
   render() {
     const { value } = this.state;
-    const { min, max, hasTooltip, step, size, forceWidth } = this.props;
-    const displayValue = <div className="range-value">{ parseInt(String(value)) }</div>;
+    const { min, max, hasTooltip, step, size, forceWidth, showValue } = this.props;
+    const displayValue = showValue ? <div className="range-value">{ parseInt(String(value)) }</div> : '';
 
     const rangeWidth = forceWidth ? forceWidth + '%' : 'auto';
     const style = {
