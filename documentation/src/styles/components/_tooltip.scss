@@ -3,14 +3,14 @@ $tooltip-offset: 2rem;
 .tooltip {
   position: relative;
   cursor: pointer;
-  width: auto;
+  display: block;
 
   .tooltip-trigger {
     display: inline-block;
   }
 
   .tooltip-content {
-    &.tooltip-primary {
+    &.tooltip-secondary {
       background: $primary-dark-blue;
       color: $white;
       &.tooltip-top:after {
@@ -33,7 +33,6 @@ $tooltip-offset: 2rem;
     box-sizing: border-box;
     border-radius: 0.5rem;
 
-    max-width: 24rem;
     min-width: 24rem;
     min-height: 10rem;
     position: absolute;

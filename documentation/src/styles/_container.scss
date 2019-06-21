@@ -1,0 +1,118 @@
+
+@mixin setPadding {
+  margin: -1.4rem 0;
+}
+
+.wrapper {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
+
+  .container {
+
+    order: 0;
+    flex: 0 1 100%;
+    align-self: stretch;
+  }
+
+  .nav {
+    background: $grey-light;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: stretch;
+    height: 100vh;
+    width: 8rem;
+  }
+
+  .header {
+    margin: 0;
+    max-height: 6rem;
+  }
+
+  .main {
+    width: calc(100vw - 7.4rem);
+    min-height: calc(100vh - 11rem);
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    @include setPadding();
+
+    .control-panel {
+      display: flex;
+      width: 24rem;
+      min-width: 24rem;
+      max-height: calc(100vh - 12rem);
+    }
+
+    .output {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+
+      max-height: calc(100vh - 12rem);
+
+      overflow-y: scroll;
+
+    }
+  }
+
+  .control-bar {
+    margin: 0;
+    display: flex;
+
+    height: 6rem;
+    width: 100%;
+    @include setPadding();
+  }
+
+  .footer {
+    width: 100%;
+    height: 3rem;
+  }
+
+  // content grid for quartz
+
+  .content-grid {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: wrap;
+    margin: 0;
+    width: calc(100vw - 320px);
+    .col {
+      box-sizing: border-box;
+      border: 1px solid white;
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 1404px) {
+    .content-grid {
+      .col {
+        margin: 0 0 0 15px;
+        width: calc(49% - 10px);
+        min-width: calc(49% - 10px);
+        flex: 0 1 48%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1980px) {
+    .content-grid {
+      .col {
+        width: calc(33.33% - 15px);
+        min-width: calc(33.33% - 15px);
+        flex: 0 1 32.33%;
+      }
+    }
+  }
+
+}
+

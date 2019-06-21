@@ -6,7 +6,41 @@ import '../styles/app.css';
 import '../styles/story-book.css';
 
 storiesOf('Tooltip', module)
-  .add(
+
+    .add(
+        'Primary - bullets',
+        () => (
+            <div className="grid-center">
+                <div className="col4">
+
+                    <Tooltip position="left" forceWidth={320} type="secondary" message={
+                        <div className="">
+                            <ul className="list-bullets">
+                                <li className="bullet-1">This is a list item This is a list item. more text here</li>
+                                <li className="bullet-2">This is a list item</li>
+                                <li className="bullet-3">This is a list item</li>
+                                <li className="bullet-4">This is a list item</li>
+                                <li className="bullet-5">This is a list item</li>
+                                <li className="bullet-6">This is a list item</li>
+                                <li className="bullet-7">This is a list item</li>
+                                <li className="bullet-8">This is a list item</li>
+                                <li className="bullet-9">This is a list item</li>
+                                <li className="bullet-10">This is a list item</li>
+                            </ul>
+                            <p className="label-large">Title (optional) Title (optional) Title (optional)</p>
+                            <p className="label-small">Subtitle (optional)</p>
+                        </div>
+                    }>
+                        <div className="label-large bold">Target</div>
+                    </Tooltip>
+                </div>
+            </div>
+        ),
+        { info: { inline: true } },
+    )
+
+
+    .add(
     'Primary - top',
     () => (
       <div className="grid-center">

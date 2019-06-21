@@ -80,3 +80,12 @@ $gl-mq-list: (
         sm: 63.938em,
         xs: 37.438em
 ) !default;;
+
+$category-colors: $orange-darkest $orange-dark $red-dark $magenta-dark $primary-medium-blue $aig-blue $teal-medium $green-dark $green-medium $notification $yellow-darkest $red-darkest $magenta-darkest;
+
+@each $current-color in $category-colors {
+  $i: index($category-colors, $current-color);
+  .category-color-#{$i} {
+    background: $current-color;
+  }
+}

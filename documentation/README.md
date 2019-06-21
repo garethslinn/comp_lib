@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> A component liberary for React
+> A component library for React
 
 ### 🏠 [Homepage](localhost:3000)
 

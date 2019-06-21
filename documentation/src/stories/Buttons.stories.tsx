@@ -129,7 +129,7 @@ storiesOf('Buttons', module)
         isButtonDisabled={false}
         isBlock={false}
       >
-        <span>Active..</span>
+        <span>Active</span>
       </Button>
     ),
     { info: { inline: true } },

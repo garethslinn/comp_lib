@@ -9,6 +9,7 @@ interface Props {
   children: any;
   type: string;
   message: any;
+  forceWidth: number;
 }
 
 export class Tooltip extends React.Component<Props, State> {
@@ -25,13 +26,21 @@ export class Tooltip extends React.Component<Props, State> {
   };
 
   render() {
-    const { type, children, message, position } = this.props;
+    const { type, children, message, position, forceWidth } = this.props;
     const { show } = this;
+    const rangeWidth = forceWidth ? forceWidth + 'px' : 'auto';
+    const style = {
+      width: rangeWidth
+    };
+
     return (
       <span className="tooltip" onMouseLeave={() => show(false)}>
         {this.state.isVisible && (
+
+
           <div
-            className={`tooltip-content tooltip-${position} tooltip-${type}`}
+
+            className={`tooltip-content tooltip-${position} tooltip-${type}`} style={style}
           >
             <div className="tooltip-message">{message}</div>
           </div>

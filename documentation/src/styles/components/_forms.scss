@@ -1,4 +1,10 @@
 .text-field {
+
+  &[placeholder]:focus::-webkit-input-placeholder {
+    transition: opacity 0.1s 0.1s ease;
+    opacity: 0;
+  }
+
   box-sizing: border-box;
   min-width: 100%;
   border: 0.1px solid $grey-medium;
@@ -12,11 +18,13 @@
     font-size: 1.4rem;
     line-height: 1.6rem;
   }
+
   &:focus {
     border: 2px solid $primary-medium-blue;
     padding: 1.7rem 1.6rem 1.5rem 1.4rem;
     color: $primary-medium-blue;
     background-color: $button-focus;
+
     &::placeholder {
       color: $primary-medium-blue;
     }
@@ -43,7 +51,7 @@
   &:disabled {
     background-color: $primary-light-blue;
     color: $disabled;
-    border: 1px solid $teal-light;
+    border: 2px solid $teal-light;
     &::placeholder {
       color: $disabled;
     }
@@ -190,9 +198,6 @@
     font-size: 1.2rem;
     line-height: 1.4rem;
 
-    &:disabled {
-      color: $grey-light;
-    }
   }
 
   span:before,
@@ -283,6 +288,10 @@
 
   input:checked + span:before {
     background: $toggle-track-active;
+  }
+
+  input:disabled + span {
+    color: $grey-light;
   }
 }
 

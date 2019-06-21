@@ -1,93 +1,38 @@
 // AIG ui-toolkit - _lists.scss
 
-// TO DO
-
-ul {
-
-  &.bullet-default {
-    li:before {
-      content:"·";
-      font-size:7rem;
-      vertical-align:top;
-      line-height:2rem;
-      color: $primary-medium-blue;
+$bullet-colors: $orange-darkest $orange-dark $red-dark $magenta-dark $primary-medium-blue $aig-blue $teal-medium $green-dark $green-medium $notification $yellow-darkest $red-darkest $magenta-darkest;
+@each $current-color in $bullet-colors {
+  $i: index($bullet-colors, $current-color);
+  .bullet-#{$i} {
+    &::before {
+      color: $current-color!important;
     }
   }
+}
 
-  li {
+.list-bullets {
+  overflow: hidden;
+  > li {
     list-style: none;
-    font-size: 1.6rem;
-    color: $grey-darkest;
+    position: relative;
+    padding: 0 0 0 2em;
+    margin-left: -4rem;
+    color: $steel-darkest;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+
+    &::before {
+      position: absolute;
+      content: '\2022';
+      color: red;
+      top: -1.4rem;
+      left: 0.1rem;
+      text-align: left;
+      font-size: 4.5em;
+      line-height: 0.75;
+    }
   }
-
-
-  &.bullet-outline {
-
-
-  }
-
-  &.bullet-diamond {
-
-
-  }
-
-
 }
-
-/*
-
-ol {
-    display: block;
-    padding: 0 0 0 26px;
-    list-style: none;
-    background: #ccc;
-    overflow: hidden;
-    counter-reset: numList;
-}
-ol li {
-    width: 176px;
-    margin-right: 44px;
-    float: left;
-    position: relative
-}
-ol li:before {
-    counter-increment: numList;
-    content: counter(numList);
-
-    float: left;
-    position: absolute;
-    left: -26px;
-
-    font: bold 12px sans-serif;
-    text-align: center;
-    color: #fff;
-    line-height: 18px;
-
-    width: 18px; height: 18px;
-    background: #f0f;
-
-    -moz-border-radius: 999px;
-    border-radius: 999px
-}
- */
-
-
-
-
-/*
-ol {margin-left:0; padding-left:0; counter-reset:item}
-ol>li {margin-left:0; padding-left:0; counter-increment:item; list-style:none inside;margin-bottom:10px}
-ol>li:before {
-content:"(" counter(item) ")";
-padding:3px 5px;
-margin-right:0.5em;
-background:#ccc;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-}
- */
-
 
 
 

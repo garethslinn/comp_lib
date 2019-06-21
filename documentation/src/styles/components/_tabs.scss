@@ -55,8 +55,13 @@
     }
   }
   &.tabs-basic {
+    &.tabs-sm {
+      .tab {
+        padding: 1.5rem 1.5rem 0.3rem 1.5rem;
+      }
+    }
     .tab {
-      padding: 1.5rem 1.5rem 0.3rem 1.5rem;
+      padding: 1.5rem 1.5rem 1.4rem 1.5rem;
       background-color: transparent;
       border: none;
       border-bottom: 2px solid $selectable-card-border;

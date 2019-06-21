@@ -19,7 +19,6 @@
 @mixin button-disabled() {
   background-color: $button-disabled-bg;
   color: $button-disabled-fg;
-  border: none;
 
   &:hover {
     background-color: $button-disabled-bg;
@@ -95,6 +94,7 @@
     }
 
     &:disabled {
+      border: 0.2rem solid $button-disabled-bg;
       @include button-disabled;
     }
   }
@@ -156,7 +156,7 @@
         @include button-disabled;
 
         .icon {
-          @include button-icon($primary-medium-blue);
+          color: $disabled;
         }
       }
     }
@@ -188,12 +188,21 @@
     &:hover {
       border-bottom: 0.2rem solid $primary-dark-blue;
       color: $primary-dark-blue;
-      padding-bottom: 0.2rem;
+      padding-bottom: 1.3rem;
     }
 
     &:disabled {
       opacity: 0.5;
       background-color: transparent;
+      &:hover {
+       span {
+         color: $primary-medium-blue;
+         border-color: $primary-medium-blue;
+       }
+
+
+
+      }
     }
     &:hover {
       border-bottom: 0.2rem solid $white;
