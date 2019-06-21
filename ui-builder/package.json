@@ -1,23 +1,22 @@
 {
-  "name": "ui-builder",
+  "name": "ui-toolkit",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc && npm run copy:assets && echo 'Finished building NPM package'",
-    "copy:assets": "cp -r src/assets build && npm run copy:css",
-    "copy:css": "cp -r src/app.css build"
+    "copy:assets": "cp -r src/assets dist && npm run copy:css",
+    "copy:css": "cp -r src/app.css dist && npm pack"
   },
   "author": "",
   "license": "ISC",
-  "types": "index.d.ts",
+  "types": "dist/index.d.ts",
   "peerDependencies": {
-    "react": "^15.0.0-0 || ^16.0.0-0"
-  },
-  "devDependencies": {
     "@types/react": "^16.8.19",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
     "typescript": "^3.4.5"
   },
   "dependencies": {
