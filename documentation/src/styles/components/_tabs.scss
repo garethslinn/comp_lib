@@ -1,7 +1,6 @@
 @mixin tab-hover() {
   background-color: $primary-dark-blue;
   color: $white;
-  border-bottom: none;
 }
 
 @mixin tab-basic-hover($color) {
@@ -10,6 +9,29 @@
 }
 
 .tabs {
+  &.tabs-grouped {
+    .tab {
+      border-radius: 0;
+      margin: 0;
+
+      box-shadow: 0 4px 8px 0 rgba(0, 87, 184, 0.06);
+      border: solid 1px $steel-light;
+
+      &:last-of-type {
+        border-radius: 0 0.5rem 0.5rem 0;
+      }
+      &:first-of-type {
+        border-radius: 0.5rem 0 0 0.5rem;
+      }
+      &.active {
+        border: 1px solid $selectable-card-border;
+
+        &:hover {
+          @include tab-hover;
+        }
+      }
+    }
+  }
   .tab {
     color: $steel-dark;
     display: inline-block;
@@ -53,6 +75,13 @@
       font-size: 1.2rem;
       padding: 0.8rem 1.2rem;
     }
+    .tab-icon {
+      padding: 0.6rem 1rem 0 1rem;
+
+      .icon {
+        font-size: 2rem;
+      }
+    }
   }
   &.tabs-basic {
     &.tabs-sm {
@@ -79,13 +108,16 @@
         border-bottom: 2px solid $disabled-underline;
       }
     }
-
   }
 
+  &.tabs-combined {
+    button.tab {
+      border: none;
+      border-top: 1px solid $selectable-card-border;
+      border-bottom: 1px solid $selectable-card-border;
+    }
   }
-
-
-
+}
 
 @media (min-width: 32rem) {
   .tabs {

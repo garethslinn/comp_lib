@@ -13,7 +13,7 @@ storiesOf('Tooltip', module)
             <div className="grid-center">
                 <div className="col4">
 
-                    <Tooltip position="left" forceWidth={320} type="secondary" message={
+                    <Tooltip position="left" forceWidth={320} type="primary" message={
                         <div className="">
                             <ul className="list-bullets">
                                 <li className="bullet-1">This is a list item This is a list item. more text here</li>

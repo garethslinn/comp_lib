@@ -53,6 +53,45 @@ storiesOf('Tabs', module)
     { info: { inline: true } },
   )
   .add(
+    'Tabs - grouped - small',
+    () => (
+      <Tabs isTabSmall={true} isBasic={false} isGrouped={true}>
+        Option 1<span />
+        Option 2<span />
+        Option 3 -disabled-
+        <span />
+        Option 4<span />
+      </Tabs>
+    ),
+    { info: { inline: true } },
+  )
+  .add(
+    'Tabs - grouped with icons - small',
+    () => (
+      <Tabs isTabSmall={true} isBasic={false} isGrouped={true} isIcon={true}>
+        icon-sliders<span />
+        icon-image<span />
+        icon-reports -disabled-
+        <span />
+        icon-graph<span />
+      </Tabs>
+    ),
+    { info: { inline: true } },
+  )
+    .add(
+        'Tabs - no divison - grouped with icons - small',
+        () => (
+            <Tabs isTabSmall={true} isBasic={false} isGrouped={true} isIcon={true} isCombined={true}>
+                icon-sliders<span />
+                icon-image<span />
+                icon-reports -disabled-
+                <span />
+                icon-graph<span />
+            </Tabs>
+        ),
+        { info: { inline: true } },
+    )
+  .add(
     'Tabs - basic - large',
     () => (
       <Tabs isTabSmall={false} isBasic={true}>

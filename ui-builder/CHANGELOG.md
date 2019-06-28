@@ -1,9 +1,16 @@
-# V1.1.0
+## Release V1.0.0
 
-Major refactor for distribution purposes.
+```sh
+Alert
+Button
+RadioButton
+Range
+SelectableCard
+Tabs
+Toggle
+Tooltip
+forms/InputField
+```
 
-Introducing components:
-
-Button, Alert and SelectableCard
-
+ 
 

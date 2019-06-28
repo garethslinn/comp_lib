@@ -26,6 +26,7 @@ npm run storybook
 
 ```sh
 npm test
+npm run test -- --coverage 
 ```
 
 ## Author
