@@ -1,6 +1,6 @@
 
 
-<h1 align="center">AIG UI Toolkit installation guide 👋</h1>
+<h1 align="center">Component Library installation guide 👋</h1>
 
 > A component library for React
 

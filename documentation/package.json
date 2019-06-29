@@ -1,20 +1,17 @@
 {
-  "name": "sb2",
+  "name": "comp_lib",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/jest": "24.0.4",
-    "@types/node": "11.9.4",
-    "@types/react": "16.8.3",
-    "@types/react-dom": "16.8.1",
+    "@types/react-router": "^5.0.2",
     "gridlex": "^2.7.1",
     "normalize-scss": "^7.0.1",
     "onchange": "^5.0.2",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
+    "page1": "^1.2.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-rangeslider": "^2.2.0",
-    "react-scripts": "2.1.5",
-    "typescript": "3.3.3"
+    "react-scripts": "2.1.5"
   },
   "scripts": {
     "start": "parcel src/dev/index.html",
@@ -44,6 +41,12 @@
     "@storybook/addon-links": "^4.1.11",
     "@storybook/addons": "^4.1.11",
     "@storybook/react": "^4.1.11",
+    "@types/jest": "^24.0.4",
+    "@types/node": "^11.9.4",
+    "@types/react": "^16.8.3",
+    "@types/react-dom": "^16.8.1",
+    "@types/react-router": "^5.0.2",
+    "@types/react-router-dom": "^4.3.4",
     "@types/storybook__react": "^4.0.1",
     "babel-loader": "^8.0.5",
     "enzyme": "^3.9.0",
@@ -54,6 +57,9 @@
     "postcss": "^7.0.16",
     "postcss-cli": "^6.1.2",
     "react-docgen-typescript-loader": "^3.0.1",
-    "storybook-addon-specifications": "^2.1.2"
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "storybook-addon-specifications": "^2.1.2",
+    "typescript": "^3.5.2"
   }
 }

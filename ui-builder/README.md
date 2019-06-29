@@ -1,4 +1,4 @@
-# AIG UI TOOLKIT
+# Component Library
 ## This is a react component library
 
 # To build

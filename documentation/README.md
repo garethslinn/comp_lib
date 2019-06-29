@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to AIG UI Toolkit 👋</h1>
+<h1 align="center">Component Library</h1>
 <p>
   <img src="https://img.shields.io/badge/version-1.0.1-blue.svg?cacheSeconds=2592000" />
   <a href="localhost:9009">
