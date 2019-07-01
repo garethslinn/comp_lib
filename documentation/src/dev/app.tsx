@@ -1,55 +1,36 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import * as Page1 from './page1';
-import { BrowserRouter as  Router, Switch, Route, Link } from 'react-router-dom';
+import Home from '../pages/Home';
+import Page1 from '../pages/Page1';
+import Page2 from '../pages/Page2';
+
+import { BrowserRouter as  Router, Route, Link } from 'react-router-dom';
 
 
-class Home extends React.Component<any, any> {
+import * as React from 'react';
+
+
+class App extends React.Component<any, any> {
     render() {
         return (
             <div>
-                <div>HOME</div>
-                <div><Link to='/one'>Goto Page One</Link></div>
-                <div><Link to='/two'>Goto Page Two</Link></div>
-            </div>);
-    }
-}
+                <h1>test</h1>
 
-class One extends React.Component<any, any> {
-    render() {
-        return (
-            <div>
-                <div>ONE</div>
-                <Link to='/'>Goto Home</Link>
                 <Router>
-                    <Switch>
-                        <Route exact path="/" component={Page1} />
-                    </Switch>
+                    <ul>
+                        <li><Link to='/'>Home</Link></li>
+                        <li><Link to='/one'>Page 1</Link></li>
+                        <li><Link to='/two'>Page 2</Link></li>
+                    </ul>
+                    <div>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/one" component={Page1} />
+                        <Route exact path="/two" component={Page2} />
+                    </div>
                 </Router>
             </div>
         );
     }
 }
 
-class Two extends React.Component<any, any> {
-    render() {
-        return (
-            <div>
-                <div>TWO</div>
-                <Link to='/'>Goto Home</Link>
-            </div>
-        );
-    }
-}
-
-ReactDOM.render(
-    <Router>
-        <div>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/one" component={One} />
-            <Route exact path="/two" component={Two} />
-        </div>
-    </Router>
-
-    , document.getElementById('root')
-);
+export default App
