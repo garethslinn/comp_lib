@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Toggle from '../utils/Toggle';
 
 
 class Home extends React.Component<any, any> {
@@ -6,6 +7,7 @@ class Home extends React.Component<any, any> {
         return (
             <div>
                 <div>HOME</div>
+                <Toggle />
             </div>);
     }
 }

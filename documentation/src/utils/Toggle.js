@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { TOGGLE } from "reducers/UIReducer";
+import { TOGGLE } from "../reducers/UIReducer";
 
 const Toggle = ({ toggleSwitch }) => {
     const ui = useSelector(state => state.ui);

@@ -2,16 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 // @ts-ignore
 import { Provider } from "react-redux";
-import Store from "../Store";
-import App from "../dev/app";
+import Store from "./Store";
+import Routes from "./components/Routes";
 
-export function Entry() {
+export function App() {
     return (
         <Provider store={Store}>
-            <App />
+            <Routes />
         </Provider>
     );
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<Entry />, rootElement);
+ReactDOM.render(<App />, rootElement);

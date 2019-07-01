@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
 import ui from "./UIReducer";
 
-const rootReducer = combineReducers({
+const index = combineReducers({
     ui
 });
 
-export default rootReducer;
+export default index;
