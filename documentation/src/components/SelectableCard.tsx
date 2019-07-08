@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-interface SelectableCard {
+interface Props {
 	action: () => void;
 	title: string;
 	description: string;
 	isDisabled: boolean;
 }
 
-export const SelectableCard : React.FunctionComponent<SelectableCard> = (props) => {
+export const SelectableCard : React.FunctionComponent<Props> = (props) => {
 	const {isDisabled, title, description} = props;
 	return (
 		<React.Fragment>

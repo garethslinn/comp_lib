@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-interface Button {
+interface Props {
 	action: () => void;
 	buttonType: string;
 	isButtonSmall: boolean;
@@ -9,7 +9,7 @@ interface Button {
 	isButtonDisabled: boolean;
 }
 
-export const Button: React.FunctionComponent<Button> = (props) => {
+export const Button: React.FunctionComponent<Props> = (props) => {
 	const { buttonType, isButtonSmall, isButtonWithIcon, isButtonDisabled, isBlock, action, children } = props;
 	const buttonSize = isButtonSmall ? '-sm' : '';
 	const block = isBlock ? 'block' : '';

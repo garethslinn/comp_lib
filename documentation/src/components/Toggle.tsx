@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-interface Toggle {
+interface Props {
     id: any;
     size: string;
     label: string;
     isDisabled: boolean;
 }
 
-export const Toggle: React.FunctionComponent<Toggle> = (props: any) => {
+export const Toggle: React.FunctionComponent<Props> = (props: any) => {
     const { size, label, isDisabled, id } = props;
 
     return (

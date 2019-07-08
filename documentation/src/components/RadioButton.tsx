@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-interface RadioButton {
+interface Props {
   id: string;
   label: string;
   name: string;
@@ -9,7 +9,7 @@ interface RadioButton {
   isSmall: boolean;
 }
 
-export const RadioButton: React.FunctionComponent<RadioButton> = (props:any) => {
+export const RadioButton: React.FunctionComponent<Props> = (props:any) => {
     const { id, label, name, isChecked, isDisabled, isSmall} = props;
     const radioSize = isSmall? '-sm' : '-lg';
     const labelSize = isSmall? '.label-medium' : 'label-large';

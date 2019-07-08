@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-interface Alert {
+interface Props {
   action: () => void;
   alertType: string;
   iconType: string;
   children: any;
 }
-export const Alert: React.FunctionComponent<Alert> = (props:any) => {
+export const Alert: React.FunctionComponent<Props> = (props:any) => {
     const { action, alertType, children } = props;
     return (
       <div onClick={action} className={'alert ' + alertType}>
